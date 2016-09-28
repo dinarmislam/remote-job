@@ -15,3 +15,86 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@font-face {
+  font-family: "FuturaBT-Book";
+  src: url(ufonts.com_futurabt-book-opentype.otf) format("truetype");
+}
+body{
+  font-family: FuturaBT-Book;
+  font-size: 16px;
+  line-height: 2rem;
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 950px;
+
+  }
+}
+.header {
+    margin-top: 63px;
+    border-bottom: 1px solid #999;
+}
+.header img {
+    width: 250px;
+}
+.promo {
+    font-size: 2.2rem;
+    line-height: 1.5em;
+    padding-top: 50px;
+}
+h2.dnew{
+    border-top: 1px solid #ccc;
+    color: #c00;
+    margin-bottom: 10px;
+    padding: 30px 0;
+}
+.form-control {
+    border-radius: 5px !important;
+    cursor: auto !important;
+    display: inline !important;
+    padding: 8px !important;
+    width: 521px !important;
+}
+label {
+    font-size: 17px;
+    width: 128px !important;
+}
+.help-block {
+    color: #737373;
+    display: block;
+    margin-bottom: 30px !important;
+    margin-top: 0 !important;
+    padding-left: 130px;
+}
+.form-group {
+    margin-bottom: 0 !important;
+}
+.radio label, .checkbox label {
+
+    width: 100% !important;
+}
+p.highlight {
+
+    width: 70% !important;
+    font-size: 18px;
+}
+.job_description label, .job_apply label {
+    width: 100% !important;
+    padding-bottom: 10px;
+}
+.job_description .form-control, .job_apply .form-control {
+    width: 100% !important;
+    margin-bottom: 10px;
+}
+.job_description .form-control{
+  height: 200px;
+}
+.job_apply .help-block {
+  padding: 0 !important;
+}
+.checkbox{
+  padding: 30px 0;
+}
+.job_highlight label {
+    font-weight: bold !important;
+}

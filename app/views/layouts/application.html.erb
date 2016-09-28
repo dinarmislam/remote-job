@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Remotejob</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>Remotejob</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="container">
+        <div class="row header">
+          <%= link_to root_path do %>
+				      <%= image_tag "logo.jpg" %>
+			    <% end %>
+        </div>
 
-<%= yield %>
+      </div>
 
-</body>
+      <div class="container">
+        <%= yield %>
+      </div>
+    </div>
+  </body>
 </html>
