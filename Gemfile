@@ -12,6 +12,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'simple_form'
 gem 'trix'
+gem 'rails_autolink'
+
 
 
 group :development, :test do

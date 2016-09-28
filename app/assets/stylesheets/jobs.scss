@@ -1,3 +1,180 @@
-// Place all the styles related to the jobs controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+}
+.show {
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+.heading{
+  border-bottom: 1px solid #999;
+  padding-bottom: 10px;
+}
+.heading h1 {
+    color: #222;
+    font-size: 36px;
+    font-weight: normal;
+    line-height: 1em;
+    margin: 0 0 7px;
+    padding: 0;
+}
+.heading h3 {
+    color: #888;
+    font-size: 15px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    line-height: 1em;
+    margin: 0 0 20px;
+    text-transform: uppercase;
+}
+.heading h2 {
+    color: #999;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 1.4em;
+    margin: 0;
+    padding: 0 0 10px;
+}
+.heading h2 span {
+    color: #000;
+    font-weight: bold;
+}
+.heading span.location {
+    font-weight: normal;
+}
+.heading h2 a {
+    font-size: 20px;
+    text-decoration: none;
+}
+.description{
+  padding-top: 20px;
+  padding-bottom: 50px;
+  line-height: 28px;
+}
+.apply {
+    background-color: #efefef;
+    clear: both;
+    color: #000;
+    margin: 50px 0;
+    overflow: hidden;
+    padding: 20px 20px 15px;
+}
+.apply h3 {
+    color: black;
+    font-size: 23px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin: 0 0 10px;
+    padding: 0;
+    text-transform: uppercase;
+}
+.apply p {
+    font-size: 18px;
+    line-height: 1.5em;
+}
+#intro {
+    font-size: 27px;
+    line-height: 1.5em;
+    padding-top: 50px;
+}
+#intro p {
+    padding: 0 10px;
+}
+#intro a {
+    border-bottom: 3px solid black;
+    color: black !important;
+    text-decoration: none;
+}
+#intro a.twitter {
+    border-bottom: 0 none;
+    color: #c00 !important;
+}
+nav {
+    background-color: #efefef;
+    border-radius: 50px;
+    overflow: hidden;
+    padding: 15px 30px;
+}
+nav {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+nav form#search_form input {
+    background: #fff url("/images/icon-search.png") no-repeat scroll 10px 14px;
+    border-radius: 5px;
+    cursor: auto;
+    float: left;
+    font-family: FuturaBT-Book;
+    margin-left: 10px;
+    padding: 8px 8px 8px 30px;
+    width: 370px;
+}
+div.add-listing {
+    float: right;
+    line-height: normal;
+    padding: 10px 0 0;
+}
+div.add-listing a {
+    background-color: #c00;
+    border-bottom: 3px solid #900;
+    border-radius: 5px;
+    color: white;
+    padding: 12px 20px 8px;
+    text-decoration: none;
+}
+div.add-listing a:hover {
+    background-color: #900;
+    border-bottom: 3px solid #600;
+}
+.jobs{
+  padding-bottom: 50px;
+}
+.jobs h2 {
+    color: #c00;
+    font-size: 25px;
+    letter-spacing: 5px;
+    padding-left: 10px;
+    text-align: left;
+    text-transform: uppercase;
+}
+.jobs h2 a {
+    color: #c00;
+    text-decoration: none;
+    font-weight: bold;
+}
+.jobs h2 span {
+    color: #666;
+    font-size: 14px;
+    letter-spacing: normal;
+}
+.jobs ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+.jobs ul li {
+    border-bottom: 1px solid #ccc;
+    font-size: 20px;
+    padding: 20px;
+}
+.jobs ul li a {
+    display: block;
+    text-decoration: none;
+}
+.jobs ul li span.date {
+    color: #aa9c84;
+    float: right;
+}
+.jobs ul li span.company {
+    color: black;
+    font-family: FuturaBT-bold;
+    margin-right: 10px;
+    font-weight: bold;
+}
+.jobs ul li span.title {
+    text-decoration: underline;
+}
+.footer{
+  background: #000;
+  height: 250px;
+}

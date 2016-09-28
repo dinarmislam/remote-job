@@ -8,18 +8,34 @@
   </head>
   <body>
     <div class="container-fluid">
+      <% if(!current_page?(root_path)) %>
       <div class="container">
         <div class="row header">
           <%= link_to root_path do %>
 				      <%= image_tag "logo.jpg" %>
 			    <% end %>
         </div>
-
       </div>
-
+      <% end %>
+      <% if(current_page?(root_path)) %>
+      <div class="container">
+        <div class="row header-main">
+          <%= link_to root_path do %>
+				      <%= image_tag "logo.jpg" %>
+			    <% end %>
+        </div>
+      </div>
+      <% end %>
       <div class="container">
         <%= yield %>
       </div>
     </div>
+    <% if(current_page?(root_path)) %>
+    <div class="container-fluid footer">
+      <div class="container">
+        
+      </div>
+    </div>
+    <% end %>
   </body>
 </html>

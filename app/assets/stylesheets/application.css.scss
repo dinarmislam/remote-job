@@ -25,18 +25,26 @@ body{
   font-size: 16px;
   line-height: 2rem;
 }
-@media (min-width: 1200px) {
-  .container {
-    width: 950px;
 
-  }
+  .container {
+    width: 950px !important;
 }
+
+
 .header {
     margin-top: 63px;
     border-bottom: 1px solid #999;
 }
 .header img {
     width: 250px;
+}
+.header-main {
+    margin-top: 63px;
+    border-bottom: 1px solid #999;
+    padding: 20px 20px 0;
+}
+.header-main img {
+    width: 100%;
 }
 .promo {
     font-size: 2.2rem;
@@ -88,7 +96,7 @@ p.highlight {
     margin-bottom: 10px;
 }
 trix-editor{
-  height: 200px;
+  min-height: 200px;
 }
 .job_apply .help-block {
   padding: 0 !important;

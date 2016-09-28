@@ -1,1 +1,31 @@
-</h1>all jobs here</h1>
+<div class="row" id="intro">
+  <a href="/#intro"><strong>We Work Remotely</strong></a> is the best place to find and list jobs that aren’t
+    restricted by commutes or a particular geographic area. Find the most qualified people in the most unexpected
+    places: Hire remote! Follow us on Twitter
+  <a class="twitter" href="https://twitter.com/dinarcse">@dinarcse</a>
+</div>
+<div class="row">
+  <nav>
+    <div class="add-listing">
+      <%= link_to "Post a job: $200 for 30 days", new_job_path %>
+    </div>
+    <form id="search_form" method="get" action="/jobs/search">
+      <input id="search_term" type="text" placeholder="Search: ‘css’, ‘javascript’, ‘rails’…" name="term">
+    </form>
+  </nav>
+</div>
+<div class="row jobs">
+  <h2><a href="#">All Other Jobs</a><span> Latest post 1 day ago</span></h2>
+  <ul>
+    <% @jobs.each do |job| %>
+      <li>
+        <a href="/jobs/<%= job.id %>">
+          <span class="company"><%= job.name %></span>
+          <span class="title"><%= job.job_title %></span>
+          <span class="date"><%= job.created_at.strftime("%B %d") %></span>
+        </a>
+      </li>
+    <% end %>
+  </ul>
+
+</div>

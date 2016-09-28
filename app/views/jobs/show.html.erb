@@ -1,0 +1,31 @@
+<div class="row show">
+  <div class="col-md-6 text-left">
+    <%= link_to "← Back to all jobs", root_path %>
+  </div>
+  <div class="col-md-6 text-right">
+    <%= link_to "See more DevOps & Sysadmin jobs →", root_path %>
+  </div>
+</div>
+<div class="row heading">
+  <h1><%= @job.job_title %></h1>
+  <h3>Posted <%= @job.created_at.strftime("%B %d") %></h3>
+  <h2>
+    <span class="company"><%= @job.name %></span>
+    <br>
+    <span class="location">Headquarters: <%= @job.headquarters %></span>
+    <br>
+    <%= link_to @job.url, @job.url %>
+  </h2>
+</div>
+<div class="row description">
+  <div class="col-md-9 nopadding">
+    <%= @job.description.html_safe %>
+  </div>
+  <div class="col-md-3">
+    share button will be here
+  </div>
+</div>
+<div class="row apply">
+  <h3>Apply for this position</h3>
+  <p><%= auto_link(@job.apply, :html => { :target => '_blank' }) %></p>
+</div>
