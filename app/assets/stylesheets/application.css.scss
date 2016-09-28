@@ -15,6 +15,7 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "trix";
 @font-face {
   font-family: "FuturaBT-Book";
   src: url(ufonts.com_futurabt-book-opentype.otf) format("truetype");
@@ -86,7 +87,7 @@ p.highlight {
     width: 100% !important;
     margin-bottom: 10px;
 }
-.job_description .form-control{
+trix-editor{
   height: 200px;
 }
 .job_apply .help-block {

@@ -4,12 +4,13 @@
   <%= f.hint '“Senior Designer” or “Rails Programmer”' %>
   <%= f.input :headquarters %>
   <%= f.hint '“Chicago, IL”, “Stockholm, Sweden” ' %>
-  <%= f.input :description,label: 'Job description', as: :text %>
+  <%= f.label :Job_description %>
+  <%= f.trix_editor :description %><br>
   <%= f.input :apply, label: 'How do people apply for this job?', hint: 'Example: Send a resume to jane@company.com' %>
   <h2 class="dnew">Tell us about your company</h2>
   <%= f.input :name, hint: 'Enter your company or organization’s name. ' %>
   <%= f.input :url, hint: 'Example: https://mybusiness.com/careers/apply' %>
-  <%= f.input :email, hint: 'This is where we’ll send your receipt and confirmation email. ' %>
+  <%= f.input :email, hint: 'This is where we’ll send your receipt and confirmation email.', placeholder: 'user@domain.com' %>
   <h2 class="dnew">Help your ad stand out</h2>
   <p class="highlight">For only <strong>$50 more</strong> you can highlight your ad. Highlighted ads have a yellow background in the list so they stand out against the others.</p>
   <%= f.input :highlight, inline_label: 'Yes, highlight my ad for only $50.', as: :boolean, checked_value: true, unchecked_value: false %>
