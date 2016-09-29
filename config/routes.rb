@@ -1,6 +1,7 @@
-Rails.application.routes.draw do
+Rails.application.routes.draw do 
 
-  resources :jobs
-  root 'jobs#index'
+  resources :jobs, :only => [:show, :new, :create]
+  resources :categories, :only => [:show, :index]
+  root 'categories#index'
 
 end

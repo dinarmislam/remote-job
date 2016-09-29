@@ -4,6 +4,7 @@
   </div>
   <div class="col-md-6 text-right">
     <%= link_to "See more DevOps & Sysadmin jobs →", root_path %>
+    <%= link_to Category.find(@job.category_id).name, category_path(@job.category_id) %>
   </div>
 </div>
 <div class="row heading">

@@ -14,10 +14,11 @@
     </form>
   </nav>
 </div>
+
 <div class="row jobs">
-  <h2>All Jobs<span> Latest post 1 day ago</span></h2>
+  <h2><%= @category.name %> Jobs<span> Latest post 1 day ago</span></h2>
   <ul>
-    <% @jobs.each do |job| %>
+    <% Job.where(category_id: @category.id).each do |job| %>
       <li>
         <a href="/jobs/<%= job.id %>">
           <span class="company"><%= job.name %></span>
@@ -25,7 +26,7 @@
           <span class="date"><%= job.created_at.strftime("%B %d") %></span>
         </a>
       </li>
+      <li><a class="view-all" href="/">← Back to all jobs</a></li>
     <% end %>
   </ul>
-
 </div>

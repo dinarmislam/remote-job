@@ -15,17 +15,20 @@
   </nav>
 </div>
 <div class="row jobs">
-  <h2>All Jobs<span> Latest post 1 day ago</span></h2>
-  <ul>
-    <% @jobs.each do |job| %>
-      <li>
-        <a href="/jobs/<%= job.id %>">
-          <span class="company"><%= job.name %></span>
-          <span class="title"><%= job.job_title %></span>
-          <span class="date"><%= job.created_at.strftime("%B %d") %></span>
-        </a>
-      </li>
+  <% for category in @categories %>
+    <% if(category.jobs.count > 0) %>
+      <h2><%= link_to category.name, category %><span> Latest post 1 day ago</span></h2>
+      <ul>
+        <% for job in category.jobs %>
+          <li>
+            <%= link_to job do %>
+              <span class="company"><%= job.name %></span>
+              <span class="title"><%= job.job_title %></span>
+              <span class="date"><%= job.created_at.strftime("%B %d") %></span>
+            <% end %>
+          </li>
+        <% end %>
+      </ul>
     <% end %>
-  </ul>
-
+  <% end %>
 </div>
