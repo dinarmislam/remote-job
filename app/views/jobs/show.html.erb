@@ -3,8 +3,8 @@
     <%= link_to "← Back to all jobs", root_path %>
   </div>
   <div class="col-md-6 text-right">
-    <%= link_to "See more DevOps & Sysadmin jobs →", root_path %>
-    <%= link_to Category.find(@job.category_id).name, category_path(@job.category_id) %>
+    <%= link_to "See more #{Category.find(@job.category_id).name} jobs →", category_path(@job.category_id) %>
+    
   </div>
 </div>
 <div class="row heading">
