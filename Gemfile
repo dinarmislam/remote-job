@@ -15,7 +15,7 @@ gem 'trix'
 gem 'rails_autolink'
 gem 'elasticsearch-model'
 gem 'elasticsearch-rails'
-
+gem "paperclip", "~> 5.0.0"
 
 group :development, :test do
   gem 'byebug'

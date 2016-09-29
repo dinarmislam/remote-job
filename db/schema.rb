@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160929070346) do
+ActiveRecord::Schema.define(version: 20160929183834) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -20,17 +20,21 @@ ActiveRecord::Schema.define(version: 20160929070346) do
   end
 
   create_table "jobs", force: :cascade do |t|
-    t.string   "job_title",    limit: 255
-    t.string   "headquarters", limit: 255
-    t.text     "description",  limit: 65535
-    t.text     "apply",        limit: 65535
-    t.string   "name",         limit: 255
-    t.string   "url",          limit: 255
-    t.string   "email",        limit: 255
+    t.string   "job_title",         limit: 255
+    t.string   "headquarters",      limit: 255
+    t.text     "description",       limit: 65535
+    t.text     "apply",             limit: 65535
+    t.string   "name",              limit: 255
+    t.string   "url",               limit: 255
+    t.string   "email",             limit: 255
     t.boolean  "highlight"
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
-    t.integer  "category_id",  limit: 4
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+    t.integer  "category_id",       limit: 4
+    t.string   "logo_file_name",    limit: 255
+    t.string   "logo_content_type", limit: 255
+    t.integer  "logo_file_size",    limit: 4
+    t.datetime "logo_updated_at"
   end
 
 end

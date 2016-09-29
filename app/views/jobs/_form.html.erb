@@ -23,6 +23,8 @@
   <%= f.input :apply, label: 'How do people apply for this job?', hint: 'Example: Send a resume to jane@company.com' %>
   <h2 class="dnew">Tell us about your company</h2>
   <%= f.input :name, hint: 'Enter your company or organization’s name. ' %>
+  <%= f.input :logo, as: :file, hint: "Optional — Your company logo will appear at the top of your listing.
+190px wide is optimal. We'll resize automatically if it's wider than 190px" %>
   <%= f.input :url, hint: 'Example: https://mybusiness.com/careers/apply' %>
   <%= f.input :email, hint: 'This is where we’ll send your receipt and confirmation email.', placeholder: 'user@domain.com' %>
   <h2 class="dnew">Help your ad stand out</h2>

@@ -2,6 +2,8 @@ require 'elasticsearch/model'
 class Job < ActiveRecord::Base
   belongs_to :category
   validates :category, presence: true
+  has_attached_file :logo, styles: { medium: "300x300>"}
+  validates_attachment_content_type :logo, content_type: /\Aimage\/.*\z/
   include Elasticsearch::Model
   include Elasticsearch::Model::Callbacks
 end
