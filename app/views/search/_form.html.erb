@@ -1,3 +1,3 @@
-<form id="search_form" method="get" action="/search">
-      <input id="search_term" type="text" placeholder="Search: ‘css’, ‘javascript’, ‘rails’…" name="q">
-    </form>
+<%= form_for :q, url: search_path,:html => { :id => "search_form" }, method: :get do |form| %>
+  <%= text_field_tag :q, params[:q], placeholder: "Search: ‘css’, ‘javascript’, ‘rails’…" %>
+<% end %>
