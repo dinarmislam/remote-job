@@ -1,19 +1,26 @@
-<h1>Jobs Search</h1>
+<div class="row">
+  <nav>
+    <div class="add-listing">
+      <%= link_to "Post a job: $200 for 30 days", new_job_path %>
+    </div>
+    <form id="search_form" method="get" action="/search">
+      <input id="search_term" type="text" placeholder="Search: ‘css’, ‘javascript’, ‘rails’…" name="q">
+    </form>
+  </nav>
+</div>
 
-<%= form_for search_path, method: :get do |f| %>
-  <p>
-    <%= f.label "Search for" %>
-    <%= text_field_tag :q, params[:q] %>
-    <%= submit_tag "Go", name: nil %>
-  </p>
-<% end %>
+<div class="row jobs">
 
-<ul>
-  <% @jobs.each do |job| %>
-    <li>
-      <h3>
-        <%= link_to job.job_title, controller: "jobs", action: "show", id: job._id%>
-      </h3>
-    </li>
-  <% end %>
-</ul>
+      <ul>
+        <% @jobs.each do |job| %>
+          <li>
+            <%= link_to controller: "jobs", action: "show", id: job._id do %>
+              <span class="company"><%= job.name %></span>
+              <span class="title"><%= job.job_title %></span>
+              <span class="date"><%= job.url %></span>
+            <% end %>
+          </li>
+        <% end %>
+      </ul>
+
+</div>

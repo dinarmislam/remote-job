@@ -6,4 +6,6 @@ class SearchController < ApplicationController
       @jobs = Job.search params[:q]
     end
   end
+
+
 end

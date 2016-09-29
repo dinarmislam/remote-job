@@ -9,9 +9,8 @@
     <div class="add-listing">
       <%= link_to "Post a job: $200 for 30 days", new_job_path %>
     </div>
-    <form id="search_form" method="get" action="/jobs/search">
-      <input id="search_term" type="text" placeholder="Search: ‘css’, ‘javascript’, ‘rails’…" name="term">
-    </form>
+    
+    <%= render 'search/form' %>
   </nav>
 </div>
 <div class="row jobs">
