@@ -1,3 +1,7 @@
+<% content_for :head do %>
+  <title><%= @category.name %> Jobs</title>
+<% end %>
+
 <div class="row" id="intro">
   <a href="/#intro"><strong>We Work Remotely</strong></a> is the best place to find and list jobs that aren’t
     restricted by commutes or a particular geographic area. Find the most qualified people in the most unexpected
@@ -9,9 +13,7 @@
     <div class="add-listing">
       <%= link_to "Post a job: $200 for 30 days", new_job_path %>
     </div>
-    <form id="search_form" method="get" action="/jobs/search">
-      <input id="search_term" type="text" placeholder="Search: ‘css’, ‘javascript’, ‘rails’…" name="term">
-    </form>
+    <%= render 'search/form' %>
   </nav>
 </div>
 

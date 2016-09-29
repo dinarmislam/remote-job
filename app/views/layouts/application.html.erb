@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Remotejob</title>
+    <% if content_for?(:head) %>
+      <%= content_for(:head) %>
+    <% else %>
+      <title>We Work Remotly</title>
+    <% end %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>

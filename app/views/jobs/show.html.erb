@@ -1,3 +1,7 @@
+<% content_for :head do %>
+  <title><%= @job.job_title %></title>
+<% end %>
+
 <div class="row show">
   <div class="col-md-6 text-left">
     <%= link_to "← Back to all jobs", root_path %>
