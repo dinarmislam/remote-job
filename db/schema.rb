@@ -11,7 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160928124232) do
+ActiveRecord::Schema.define(version: 20160929070346) do
+
+  create_table "categories", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
 
   create_table "jobs", force: :cascade do |t|
     t.string   "job_title",    limit: 255
@@ -24,6 +30,7 @@ ActiveRecord::Schema.define(version: 20160928124232) do
     t.boolean  "highlight"
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
+    t.integer  "category_id",  limit: 4
   end
 
 end

@@ -1,7 +1,21 @@
 <%= simple_form_for @job do |f| %>
+  <% if @job.errors.any? %>
+  		<div id="errors">
+  			<h2><%= pluralize(@job.errors.count, "error") %> prevented this post from saving:</h2>
+  			<ul>
+  				<% @job.errors.full_messages.each do |msg| %>
+  					<li><%= msg %></li>
+  				<% end %>
+  			</ul>
+  		</div>
+  	<% end %>
   <h2 class="dnew">First, tell us about the position</h2>
   <%= f.input :job_title %>
   <%= f.hint '“Senior Designer” or “Rails Programmer”' %>
+  <div class="category">
+  <%= f.label :Select_Category %>
+  <%= f.collection_radio_buttons :category_id, Category.all, :id, :name, :item_wrapper_tag => :li, :collection_wrapper_tag => :ul %>
+  </div>
   <%= f.input :headquarters %>
   <%= f.hint '“Chicago, IL”, “Stockholm, Sweden” ' %>
   <%= f.label :Job_description %>

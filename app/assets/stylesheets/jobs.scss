@@ -178,3 +178,17 @@ div.add-listing a:hover {
   background: #000;
   height: 250px;
 }
+.category li label.collection_radio_buttons {
+    width: 400px !important;
+    margin-top: -5px !important;
+}
+.category li {
+    list-style: none;
+    padding-left: 100px;
+}
+.category input {
+    margin-right: 20px !important;
+}
+.category li label {
+    width: 100% !important;
+}
