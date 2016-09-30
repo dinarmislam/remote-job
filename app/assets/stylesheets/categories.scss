@@ -1,3 +1,21 @@
 // Place all the styles related to the categories controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+li.featured{
+  background: #FFFFCC;
+}
+li span.new {
+    background-color: #fc0;
+    border-radius: 3px;
+    color: black;
+    float: left;
+    font-family: FuturaBT-bold;
+    font-size: 10px;
+    font-weight: bold;
+    left: -50px;
+    margin: 0 -35px 0 0;
+    padding: 3px 5px;
+    position: relative;
+    text-transform: uppercase;
+    top: 3px;
+}
