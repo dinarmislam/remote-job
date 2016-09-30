@@ -9,14 +9,14 @@
     <div class="add-listing">
       <%= link_to "Post a job: $200 for 30 days", new_job_path %>
     </div>
-    
+
     <%= render 'search/form' %>
   </nav>
 </div>
 <div class="row jobs">
   <% for category in @categories %>
     <% if(category.jobs.count > 0) %>
-      <h2><%= link_to category.name, category %><span> Latest post 1 day ago</span></h2>
+      <h2><%= link_to category.name, category %><span> Latest post <%= time_ago_in_words(category.jobs.first.created_at) %></span></h2>
       <ul>
         <% for job in category.jobs %>
           <li>
