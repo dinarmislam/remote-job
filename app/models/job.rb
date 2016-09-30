@@ -1,5 +1,6 @@
 require 'elasticsearch/model'
 class Job < ActiveRecord::Base
+  
   belongs_to :category
   validates :category, presence: true
   validates :job_title, :description, :headquarters, :apply, :name, :email, presence: true
