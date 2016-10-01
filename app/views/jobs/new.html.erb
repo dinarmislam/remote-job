@@ -19,7 +19,7 @@
    </div>
  <% end %>
  <%= render "#{@job.current_step}_step", :f => f %>
- <p><%= f.submit "Continue" %></p>
- <p><%= f.submit "Back", :name => "back_button" unless @job.first_step? %></p>
+ <p><%= f.submit 'Looks great! Continue',  class: "btn btn-danger btn-lg" %></p>
+ <p><%= f.submit "Back to Previous Step", class: "btn btn-defualt btn-lg", :name => "back_button" unless @job.first_step? %></p>
 <% end %>
 <br><br><br><br>
