@@ -1,22 +1,43 @@
 class JobsController < ApplicationController
 
   def index
-
-      @jobs=Job.all.order('created_at DESC')
+    @jobs=Job.all.job('created_at DESC')
   end
 
   def new
-    @job = Job.new
+    session[:job_params] ||= {}
+    @job = Job.new(session[:job_params])
+    @job.current_step = session[:job_step]
   end
 
   def create
-    @job = Job.new(job_params)
-    if @job.save
-      redirect_to @job
+    session[:job_params].deep_merge!(params[:job]) if params[:job]
+    @job = Job.new(session[:job_params])
+    @job.current_step = session[:job_step]
+    if @job.valid?
+      if params[:back_button]
+        @job.previous_step
+      elsif @job.last_step?
+        @job.save if @job.all_valid?
+      else
+        @job.next_step
+      end
+      session[:job_step] = @job.current_step
+    end
+    if @job.new_record?
+      render "new"
     else
-      render 'new'
+      session[:job_step] = session[:job_params] = nil
+      flash[:notice] = "job saved!"
+      redirect_to @job
     end
   end
+
+
+  def preview
+    @job = Job.find(params[:id])
+  end
+
 
   def show
     @job = Job.find(params[:id])

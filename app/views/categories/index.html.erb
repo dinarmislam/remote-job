@@ -16,7 +16,7 @@
 <div class="row jobs">
   <% for category in @categories %>
     <% if(category.jobs.count > 0) %>
-      <h2><%= link_to category.name, category %><span> Latest post <%= time_ago_in_words(category.jobs.last.created_at) %></span></h2>
+      <h2><%= link_to category.name, category %><span> Latest post <%= time_ago_in_words(category.jobs.last.created_at) %> Ago</span></h2>
       <ul>
         <% for job in category.jobs %>
           <% if job.highlight == true %>

@@ -1,0 +1,36 @@
+<% content_for :head do %>
+  <title>Preview Job</title>
+<% end %>
+
+<div class="row show">
+  <h1 id="step">Step 2: Preview your ad</h1>
+</div>
+<div class="row heading">
+  <div class="col-md-9">
+    <h1><%=h @job.job_title %></h1>
+
+    <h2>
+      <span class="company"><%=h @job.name %></span>
+      <br>
+      <span class="location">Headquarters: <%=h @job.headquarters %></span>
+      <br>
+      <%=h link_to @job.url, @job.url %>
+    </h2>
+  </div>
+  <div class="col-md-3">
+    <%=h image_tag @job.logo.url(:medium) %>
+  </div>
+
+</div>
+<div class="row description">
+  <div class="col-md-9 nopadding">
+    <%=h @job.description.html_safe %>
+  </div>
+  <div class="col-md-3">
+    share button will be here
+  </div>
+</div>
+<div class="row apply">
+  <h3>Apply for this position</h3>
+  <p><%=h auto_link(@job.apply, :html => { :target => '_blank' }) %></p>
+</div>

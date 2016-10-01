@@ -1,14 +1,4 @@
-<%= simple_form_for @job do |f| %>
-  <% if @job.errors.any? %>
-  		<div id="errors">
-  			<h2><%= pluralize(@job.errors.count, "error") %> prevented this post from saving:</h2>
-  			<ul>
-  				<% @job.errors.full_messages.each do |msg| %>
-  					<li><%= msg %></li>
-  				<% end %>
-  			</ul>
-  		</div>
-  	<% end %>
+  <h1 id="step">Step 1: Create your ad</h1>
   <h2 class="dnew">First, tell us about the position</h2>
   <%= f.input :job_title %>
   <%= f.hint '“Senior Designer” or “Rails Programmer”' %>
@@ -30,6 +20,3 @@
   <h2 class="dnew">Help your ad stand out</h2>
   <p class="highlight">For only <strong>$50 more</strong> you can highlight your ad. Highlighted ads have a yellow background in the list so they stand out against the others.</p>
   <%= f.input :highlight, inline_label: 'Yes, highlight my ad for only $50.', as: :boolean, checked_value: true, unchecked_value: false %>
-  <%= f.button :submit %>
-<% end %>
-<br><br><br><br>

@@ -5,6 +5,21 @@
 <div class="promo">
   <p>Your job listing will remain on this site for 30 days. After 30 days your job listing will expire and be removed. You can always post the job again for $200 for another 30 days.</p>
 </div>
-<h1 id="step">Step 1: Create your ad</h1>
 
- <%= render 'form' %>
+
+<%= simple_form_for @job do |f| %>
+<% if @job.errors.any? %>
+   <div id="errors">
+     <h2><%= pluralize(@job.errors.count, "error") %> prevented this Job from saving:</h2>
+     <ul>
+       <% @job.errors.full_messages.each do |msg| %>
+         <li><%= msg %></li>
+       <% end %>
+     </ul>
+   </div>
+ <% end %>
+ <%= render "#{@job.current_step}_step", :f => f %>
+ <p><%= f.submit "Continue" %></p>
+ <p><%= f.submit "Back", :name => "back_button" unless @job.first_step? %></p>
+<% end %>
+<br><br><br><br>
